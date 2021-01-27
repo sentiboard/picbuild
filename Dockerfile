@@ -6,7 +6,7 @@ ARG MPLAB_VER=v5.35
 # Install dependencies and 32-bit libraries for MPLAB installer
 RUN dpkg --add-architecture i386 \
     && apt-get update && apt-get install -y --no-install-recommends \
-    wget make procps libc6:i386 libstdc++6:i386 libexpat1:i386 libxext6:i386 \
+    wget make procps libc6:i386 libstdc++6:i386 libexpat1:i386 libxext6:i386 git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
